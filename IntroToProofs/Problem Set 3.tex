@@ -1,0 +1,318 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath, amsthm, graphicx, fullpage, bm, mathrsfs, mathabx, enumerate, marginnote, color, hyperref, wasysym}
+
+%%%%%for footnote%%%%%
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%%%%%%%%%%%%%%%%
+
+%%%%%set of commands defined by me%%%%%
+\newcommand{\abs}[1]{\ensuremath{\left\lvert #1\right\rvert}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\NOT}[1]{\ensuremath{\sim\hspace{-0.05in}#1}}
+\renewcommand*\divides{\hspace{0.05in}|\hspace{0.05in}}
+\renewcommand*\div{\hspace{0.05in}\text{div}\hspace{0.05in}}
+\renewcommand*\mod{\hspace{0.05in}\text{mod}\hspace{0.05in}}
+\newcommand{\floor}[1]{\ensuremath{\left\lfloor #1\right\rfloor}}
+\newcommand{\ceil}[1]{\ensuremath{\left\lceil #1\right\rceil}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%set notation%%%%%%%%%%%%%%%%%%
+%https://tex.stackexchange.com/questions/253077/how-do-you-create-a-set-in-latex
+\usepackage{mathtools}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%\pagenumbering{gobble}
+
+\hfill\makebox[2.5in][l]{\textbf{Name: Skylar Liang}}
+
+\vspace{0.3in}
+\begin{center}
+{\Large{\textbf{MATH 3034}}}
+
+\vspace{0.1in}
+{\large{Problem Set 3 (Due Wednesday, September 25, 2019)}}
+\end{center}
+
+\vspace{0.3in}
+\noindent
+\underline{Instructions}
+\begin{itemize}
+\vspace{0.1in}
+\item You must print the problem set, write solutions on the printout (not on a separate sheet of paper), and staple all pages together.  Alternatively,  You will lose 1 point for not following this rule.
+\vspace{0.1in}
+\item Check the list of definitions and mathematical results you are allowed to use (available on Canvas).  You may not quote theorems found in a random book, including AAR.
+\vspace{0.1in}
+\item No late submission will be accepted.
+\vspace{0.1in}
+\item Each problem set will be graded out of 20 points based on your work on a few selected problems and the completeness of the rest of homework.
+\vspace{0.1in}
+\item You will receive 1 point for typing up your solutions using \LaTeX, as long as your problem set score does not exceed 20 points.  If you decide to do so, then download the corresponding tex file from Canvas and modify it (do not erase or change problem statements).  All VT students receive free Pro accounts on \href{https://www.overleaf.com/edu/vtech}{Overleaf}.
+\vspace{0.1in}
+\item You are encouraged to work with your classmates, but \textbf{you must write up your own solutions}.  Any form of plagiarism (e.g. copying your friend's tex file) will not be tolerated and will be reported to the Office of Academic Integrity.
+\vspace{0.1in}
+\item My solution will be posted within 24 hours of the deadline.  If there is a major mistake, the first student to point it out will receive 1 point.  I highly recommend that you make a copy of your problem set before you submit so that you can correct your mistakes immediately.
+\end{itemize}
+
+\vfill
+\noindent
+\textbf{Honor Pledge}: I did not give or receive any unauthorized assistance on this problem set.
+
+\vspace{0.5in}
+\hfill\makebox[3.0in]{\hrulefill}
+
+\hfill\makebox[3.0in]{Signature}
+
+\newpage
+\begin{enumerate}[{\bfseries 1.}]
+\item Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{The product of any two consecutive integers is even.}
+	\end{center}
+	\begin{normalize}
+	\vspace{0.1in}
+    	\begin{proof}
+    	Let $n$ and $n+1$ be consecutive integers. 
+    	\\Case 1 ($n$ is even)
+    	\\By definition, there exists $k\in\mathbb{Z}$ such that $n = 2k$. We have $n(n+1) = 2k(2k+1) = 4k^2 + 2k = 2(2k^2 + k)$, where $2k^2+k \in\mathbb{Z}$. Therefore, $n(n+1)$ is even.
+    	\\Case 2 ($n$ is odd)
+    	\\By definition, there exists $k\in\mathbb{Z}$ such that $n = 2k+1$. We have $n(n+1) = (2k+1)(2k+2) = 4k^2 + 6k + 2 = 2(2k^2+3k+1)$, where $2k^2+3k+1\in\mathbb{Z}$. Therefore, $n(n+1)$ is even. 
+    	\end{proof}
+	\end{normalize}
+\vspace{0.2in}
+\item Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{The product of any three consecutive integers, starting with at least 2, is divisible by 4.}
+	\end{center}
+	\begin{normalize}
+	    \vspace{0.1in}
+	    \begin{proof}
+	    17, 18, 19 are three consecutive integers, and are all greater than 2. 
+	    \\$17\cdot 18\cdot 19 = 5814 = 4(\frac{2907}{2})$, where $\frac{2907}{2}$ is not an integer. So $17\cdot 18\cdot 19\notdivides 4$
+	    \end{proof}
+	\end{normalize}
+\end{enumerate}
+
+\newpage
+\noindent
+\underline{Definition}
+
+\vspace{0.05in}
+\noindent
+Let $x\in\mathbb{R}$.
+
+\vspace{0.05in}
+\noindent
+The \textbf{floor} of $x$ (denoted by $\floor{x}$) is the unique integer $n$ such that $n\leq x< n+1$.  In other words, $\floor{x}$ is the largest integer that is not greater than $x$.  (e.g. $\floor{\pi}$=3)
+
+\vspace{0.05in}
+\noindent
+The \textbf{ceiling} of $x$ (denoted by $\ceil{x}$) is the unique integer $n$ such that $n-1<x\leq n$.  In other words, $\ceil{x}$ is the smallest integer that is not less than $x$.  (e.g. $\ceil{\pi}$=4)
+
+\vspace{0.05in}
+\noindent
+The \textbf{fractional part} of $x$ is $\text{frac}(x)=x-\floor{x}$.  Note that $0\leq\text{frac}(x)<1$.
+
+\vspace{0.2in}
+\begin{enumerate}[{\bfseries 1.}]
+\addtocounter{enumi}{2}
+\item\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Compute $\floor{2.7}$, $\ceil{2.7}$, and $\text{frac}(2.7)$.
+	\begin{normalize}
+	\vspace{0.1in}
+	\\$\floor{2.7} = 2$
+	\\$\ceil{2.7} = 3$
+	\\$\text{frac}(2.7) = 0.7$
+	\\
+	\end{normalize}
+	\item Compute $\floor{5}$ and $\ceil{5}$, and $\text{frac}(5)$.
+	\begin{normalize}
+	\vspace{0.1in}
+	\\$\floor{5} = 5$
+	\\$\ceil{5} = 5$
+	\\$\text{frac}(5) = 0$
+	\\
+	\end{normalize}
+	\item Compute $\floor{-8.6}$ and $\ceil{-8.6}$, and $\text{frac}(-8.6)$.
+	\begin{normalize}
+	\vspace{0.1in}
+	\\$\floor{-8.6} = -9$
+	\\$\ceil{-8.6} = -8$
+	\\$\text{frac}(-8.6) = 0.4$
+	\\
+	\end{normalize}
+	\end{enumerate}
+
+\vspace{0.2in}
+\item Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{$(\forall x, y\in\mathbb{R})\ \ceil{x+y}=\ceil{x}+\ceil{y}$}
+	\end{center}
+	\begin{normalize}
+	\vspace{0.1in}
+    	\begin{proof}
+    	Let $x = 5.1$, and $y = 2.7$ where $x, y\in\mathbb{R}$. 
+    	\\$\ceil{x} = \ceil{5.1} = 6$, $\ceil{y} = \ceil{2.7} = 3$, so $\ceil{x} + \ceil{y} = 6 + 3 = 9$.
+    	\\$\ceil{x+y} = \ceil{5.1 + 2.7} = \ceil{7.8} = 8\neq 9$.
+    	Therefore, $\ceil{x+y} \neq\ceil{x} + \ceil{y}$.
+    	\end{proof}
+	\end{normalize}
+	\vfill
+	\vfill
+
+\newpage
+\item Consider the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{$(\forall x\in\mathbb{R})\ \floor{x}+\floor{x+0.5}=\floor{2x}$}
+	\end{center}
+
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Try a few examples.
+	\begin{normalize}
+	\vspace{0.1in}
+	\\$x = 5.3$, $\floor{x} = 5$, $\floor{x+ 0.5} = \floor{5.8} = 5$, $2x = 10.6$, so $\floor{2x} = 10$.
+	\\$x = 5.9$, $\floor{x} = 5$, $\floor{x+ 0.5} = \floor{6.4} = 6$, $2x = 11.8$, so $\floor{2x} = 11$.
+	\\
+	\end{normalize}
+	\item Prove or disprove the statement.
+	\begin{normalize}
+	\vspace{0.1in}
+    	\begin{proof}
+    	Let $\floor{x} = n$ where $n \in\mathbb{Z}$. 
+    	\\Case 1 ($\text{frac}(x) \geq 0.5$):
+    	\\By definition, $\text{frac}(x) = x - \floor{x} = x - n \geq 0.5 $, so $x \geq n +0.5$, and $x+0.5 \geq n+1$, $2x \geq 2n + 1$.
+    	\\Then, there exists $m\in\mathbb{Z}$ such that $m \leq x +0.5 < m +1$, and $\floor{x+0.5} = m$. When $m = n+1$, $\floor{x+0.5} = n+1$. 
+    	\\Similarly, there exists $p\in\mathbb{Z}$ such that $p \leq 2x < p+1$, and $\floor{2x} = p$. When $2n+1 = p$, $\floor{2x} = 2n+1$.
+    	\\Now, we have $\floor{x} + \floor{x+0.5} = n + n + 1 = 2n + 1 = \floor{2x}$.
+    	\\Case 2 ($\text{frac}(x) < 0.5$):
+    	\\By definition, $\text{frac}(x) = x - \floor{x} = x - n < 0.5 $, so $x < n +0.5$, and $x+0.5 < n+1$, $2x < 2n + 1$.
+    	\\Then, there exits $m\in\mathbb{Z}$ such that $m \leq x +0.5 < m +1$, and $\floor{x+0.5} = m$. When $m+1 = n + 1$, $m = n$. So, $\floor{x+0.5} = n$.
+    	\\Similarly, there exists $p\in\mathbb{Z}$ such that $p \leq 2x < p+1$, and $\floor{2x} = p$. When $2n+1 = p + 1$, $2n = p$. So, $\floor{2x} = 2n$. 
+    	\\Now, we have $\floor{x} + \floor{x+0.5} = n + n= 2n = \floor{2x}$.
+    	\end{proof}
+	\end{normalize}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\end{enumerate}
+
+\newpage
+\item Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{For every real number, we can find an odd integer that is greater than its square.}
+	\end{center}
+	\begin{normalize}
+	    \begin{proof}
+	    \vspace{0.1in}
+	    Let $x\in\mathbb{R}$.
+	    \\Let $y = 2n +1$, where $n = \ceil{x^2} \in\mathbb{Z}$, so that $y\in\mathbb{Z}$ and $y$ is odd. 
+	    \\Since $x^2\geq 0$, $n\geq 0$ and $y = 2n+1 > n$. 
+	    \\By the definition, $n-1<x^2\leq n$, so $n\geq x^2$. Thus, $y > x^2$.
+	    \end{proof}
+	\end{normalize}
+
+\vspace{0.2in}
+\item Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{Every real number is equal to the determinant of some $2\times 2$ non-diagonal matrix.}
+	\end{center}
+	\begin{normalize}
+	    \begin{proof}
+	    \vspace{0.1in}
+	    Let $x\in\mathbb{R}$.
+	    \\Let $M = {\begin{bmatrix}
+	    3 & 2 \\
+	    x & x \\
+	    \end{bmatrix}}$, where $a, b, c, d\in\mathbb{R}$ and is non-diagonal.
+	    \\Then we have $det(M) = 3x - 2x = x$. 
+	    \end{proof}
+	\end{normalize}
+
+\newpage
+\item Let $x, y\in\mathbb{R}^{+}$.  Consider the following statement:
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{If $xy>441$, then $x>21$ or $y>21$.}
+	\end{center}
+
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item State the contrapositive.
+	\begin{normalize}
+	\vspace{0.1in}
+	\\If $x \leq 21$ and $y\leq21$, then $xy\leq441$.
+	\\
+	\end{normalize}
+	\item Prove the original statement using proof by contrapositive.
+	\begin{normalize}
+	    \begin{proof}
+	    \vspace{0.1in}
+	    We will prove the contrapositive.
+	    \\Let $x\in\mathbb{R}^+$ and $x \leq 21$, $y\in\mathbb{R}^+$ and $y \leq 21$.
+	    \\Therefore, $xy \leq 21\cdot 21 = 441$.
+	    \end{proof}
+	\end{normalize}
+	\vfill
+	\end{enumerate}
+
+\item Let $m, n\in\mathbb{Z}$.  Consider the following statement:
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{If $m\neq 0$ and $n\neq 0$, then $m^{2}-n^{2}\neq 1$.}
+	\end{center}
+
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item State the contrapositive.
+	\begin{normalize}
+	\vspace{0.1in}
+	\\If $m^2 - n^2 = 1$, then $m = 0$ or $n = 0$.
+	\\
+	\end{normalize}
+	\item Prove the statement using proof by contrapositive.
+	\begin{normalize}
+	    \begin{proof}
+	    \vspace{0.1in}
+	    We will prove the contrapositive.
+	    \\Suppose $m^2 - n^2 = 1$. Then, $m^2 - 1 - n^2 = 0 \Rightarrow m^2 - 1 = n^2 \Rightarrow (m+1)(m-1) = n\cdot n$.
+	    \\Case 1 ($n = 0$):
+	    \\$m$ is necessarily $0$. $n = 0$, $m$ may not be $0$.
+	    \\Case 2 ($n \neq 0$):
+	    \\$(m - 1)n = (m+1)n \Rightarrow m-1 = m+1 \Rightarrow 0 = 2$, which is a contradiction.
+	    \\So n needs to be 0. 
+	    \end{proof}
+	\end{normalize}
+	\vfill
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}

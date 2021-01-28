@@ -1,0 +1,277 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath, amsthm, graphicx, fullpage, bm, mathrsfs, mathabx, enumerate, marginnote, color, hyperref, wasysym}
+
+%%%%%for footnote%%%%%
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%%%%%%%%%%%%%%%%
+
+%%%%%set of commands defined by me%%%%%
+\newcommand{\abs}[1]{\ensuremath{\left\lvert #1\right\rvert}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\NOT}[1]{\ensuremath{\sim\hspace{-0.05in}#1}}
+\renewcommand*\divides{\hspace{0.05in}|\hspace{0.05in}}
+\renewcommand*\div{\hspace{0.05in}\text{div}\hspace{0.05in}}
+\renewcommand*\mod{\hspace{0.05in}\text{mod}\hspace{0.05in}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\hfill\makebox[2.5in][l]{\textbf{Name:}}
+
+\vspace{0.3in}
+\begin{center}
+{\Large{\textbf{MATH 3034}}}
+
+\vspace{0.1in}
+{\large{Problem Set 1 (Due Monday, September 09, 2019)}}
+\end{center}
+
+\vspace{0.3in}
+\noindent
+\underline{Instructions}
+\begin{itemize}
+\vspace{0.1in}
+\item You must print the problem set, write solutions on the printout (not on a separate sheet of paper), and staple all pages together.  Alternatively,  You will lose 1 point for not following this rule.
+\vspace{0.1in}
+\item Check the list of definitions and mathematical results you are allowed to use (available on Canvas).  You may not quote theorems found in a random book, including AAR.
+\vspace{0.1in}
+\item No late submission will be accepted.
+\vspace{0.1in}
+\item Each problem set will be graded out of 20 points based on your work on a few selected problems and the completeness of the rest of homework.
+\vspace{0.1in}
+\item You will receive 1 point for typing up your solutions using \LaTeX, as long as your problem set score does not exceed 20 points.  If you decide to do so, then download the corresponding tex file from Canvas and modify it (do not erase or change problem statements).  All VT students receive free Pro accounts on \href{https://www.overleaf.com/edu/vtech}{Overleaf}.
+\vspace{0.1in}
+\item You are encouraged to work with your classmates, but \textbf{you must write up your own solutions}.  Any form of plagiarism (e.g. copying your friend's tex file) will not be tolerated and will be reported to the Office of Academic Integrity.
+\vspace{0.1in}
+\item My solution will be posted within 24 hours of the deadline.  If there is a major mistake, the first student to point it out will receive 1 point.  I highly recommend that you make a copy of your problem set before you submit so that you can correct your mistakes immediately.
+\end{itemize}
+
+\vfill
+\noindent
+\textbf{Honor Pledge}: I did not give or receive any unauthorized assistance on this problem set.
+
+\vspace{0.5in}
+\hfill\makebox[3.0in]{\hrulefill}
+
+\hfill\makebox[3.0in]{Signature}
+
+%IMPORTANT: If you are using LaTeX, please do not change formatting.
+
+\newpage
+\begin{enumerate}[{\bfseries 1.}]
+\item Determine if the given sentence is a statement, an open statement, or neither.  If it is a statement, then determine its truth value.  Otherwise, explain why it is not a statement.
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item $\dfrac{1}{3}$ is approximately equal to 0.3.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\True Statement.\tab
+    \end{normalize}
+	\vfill
+	\item $x^{2}-x-6=0$
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\Open Statement.\tab
+    \end{normalize}
+	\vfill
+	\item $\pi=3.14159265358979$
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\False Statement.\tab
+    \end{normalize}
+	\vfill
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+
+\noindent
+\underline{Definition}
+
+\vspace{0.05in}
+\noindent
+An integer is said to be a \textbf{perfect square} if it is a square of some integer.
+
+\vfill
+\begin{enumerate}[{\bfseries 1.}]
+\addtocounter{enumi}{1}
+\item Determine the truth value of the given statement.
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item 32 is a power of 2, or $3+4\cdot 5=35$ is a sufficient condition for 6 to be negative.
+
+		\vfill
+		\begin{center}
+		%True\hspace{2in}False
+		%Choose one of the following:
+		%\framebox{True}\hspace{2in}False
+		True\hspace{2in}\framebox{False}
+		\end{center}
+	\vfill
+	\item 441 is a perfect square only if 1 is the smallest integer and $\dfrac{8}{4}$ is an integer.
+
+		\vfill
+		\begin{center}
+		%True\hspace{2in}False
+		%Choose one of the following:
+		%\framebox{True}\hspace{2in}False
+		True\hspace{2in}\framebox{False}
+		\end{center}
+	\vfill
+	\end{enumerate}
+\item Choose the logical connective that makes the given statement true.
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item $2^{2}=4$
+		$\left\{\begin{aligned}
+		%&\text{if } \\
+		&\text{\framebox{if}} \\
+		&\text{only if }
+		%&\text{\framebox{only if}}
+		\end{aligned}\right\}$
+		$1+1=3$.
+	\vspace{0.1in}
+	\item $x>0$
+		$\left\{\begin{aligned}
+		%&\text{if } \\
+		&\text{\framebox{if}} \\
+		&\text{only if }
+		%&\text{\framebox{only if}}
+		\end{aligned}\right\}$
+		$x\geq 0$.
+	\end{enumerate}
+\newpage
+\item\begin{enumerate}[(a)]
+	\item Use a truth table to prove De Morgan's law 
+		$$\NOT{(P \land Q)}\iff\ \NOT{P}\ \lor\NOT{Q}.$$
+		You must show all intermediate steps and explain why the truth table supports your conclusion.
+
+		\vspace{0.1in}
+		\begin{proof}
+		\ 
+		\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c}
+		$P$ & $Q$ & $P \land Q$ & $\NOT{(P \land Q)}$ & $\NOT{P}$ & $\NOT{Q}$ & $\NOT{P}\ \lor\NOT{Q}$ \\ \hline
+		 T  &  T  &  T  &  F  &  F  &  F  &  F\\
+		 T  &  F  &  F  &  T  &  F  &  T  &  T\\
+		 F  &  T  &  F  &  T  &  T  &  F  &  T\\
+		 F  &  F  &  F  &  T  &  T  &  T  &  T
+		\end{tabular}
+		\end{center}
+		\vspace{0.1in}
+		Because $\NOT{(P \land Q)}$ and $\NOT{P}\ \lor\NOT{Q}$
+		\underline{have the same truth value}, \\
+		they are logically equivalent.
+		\end{proof}
+	\vspace{0.3in}
+	\item Use a truth table to prove the distributive law
+		$$P\land(Q\lor R)\iff (P\land Q)\lor (P\land R).$$
+		You must show all intermediate steps and explain why the truth table supports your conclusion.
+		\vspace{0.1in}
+		\begin{proof}
+		\ 
+		\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+		$P$ & $Q$ & $R$ & $Q \lor R$ & $P \land (Q \lor R)$ & $(P \land Q)$ & $(P \land R)$ & $(P \land Q) \lor (P \land R)$ \\ \hline
+		 T  &  T  &  T  &  T  &  T  &  T  &  T  &  T\\
+		 T  &  T  &  F  &  T  &  T  &  T  &  F  &  T\\
+		 T  &  F  &  T  &  T  &  T  &  F  &  T  &  T\\
+		 T  &  F  &  F  &  F  &  F  &  F  &  F  &  F\\
+		 F  &  T  &  T  &  T  &  F  &  F  &  F  &  F\\
+		 F  &  T  &  F  &  T  &  F  &  F  &  F  &  F\\
+		 F  &  F  &  T  &  T  &  F  &  F  &  F  &  F\\
+		 F  &  F  &  F  &  F  &  F  &  F  &  F  &  F
+		\end{tabular}
+		\end{center}
+		\vspace{0.1in}
+		Because $P \land (Q \lor R)$ and $(P \land Q) \lor (P \land R)$ have the same truth value, they are logically equivalent.
+		\end{proof}
+	\end{enumerate}
+
+\newpage
+\item Use a truth table to prove or disprove that $(P\to R)\lor(Q\to R)$ and $P\lor Q\to R$ are logically equivalent.
+	You must show all intermediate steps and explain why the truth table supports your conclusion.
+	\vspace{0.1in}
+		\begin{proof}
+		\ 
+		\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+		$P$ & $Q$ & $R$ & $P \to R$ & $Q \to R$ & $(P \to R) \lor (Q \to R)$ & $P \lor Q$ & $P \lor Q \to R$ \\ \hline
+		 T  &  T  &  T  &  T  &  T  &  T  &  T  &  T\\
+		 T  &  T  &  F  &  F  &  F  &  F  &  T  &  F\\
+		 T  &  F  &  T  &  T  &  T  &  T  &  T  &  T\\
+		 T  &  F  &  F  &  F  &  T  &  T  &  T  &  F\\
+		 F  &  T  &  T  &  T  &  T  &  T  &  T  &  T\\
+		 F  &  T  &  F  &  T  &  F  &  T  &  T  &  F\\
+		 F  &  F  &  T  &  T  &  T  &  T  &  F  &  T\\
+		 F  &  F  &  F  &  T  &  T  &  T  &  F  &  T
+		\end{tabular}
+		\end{center}
+		\vspace{0.1in}
+		Because $(P \to R) \lor (Q \to R)$ and $P \lor Q \to R$ have the different truth value, they are not logically equivalent.
+		\end{proof}
+\item Consider the conditional statements $P\to Q$, $Q\to P$ (converse), $\NOT{P}\to\ \NOT{Q}$ (inverse), and $\NOT{Q}\to\ \NOT{P}$ (contrapositive).
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Which statements must be logically equivalent?
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$P\to Q$ is logically equivalent to $\NOT{Q}\to\ \NOT{P}$ (contrapositive).\tab
+        \\$Q\to P$ (converse) is logically equivalent to $\NOT{P}\to \NOT{Q}$ (inverse).\tab
+        \\
+    \end{normalize}
+	\item Construct a true conditional statement whose converse is false.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$P: 10 - 1 = 1$
+        \\$Q: 9 = 4 + 5$
+        \\statement: If $10 - 1 = 1$, then $9 = 4 + 5$.
+        \\converse: If $9 = 4 + 5$, then $10 - 1 = 1$. 
+        \\
+    \end{normalize}
+	\item Construct a true conditional statement whose converse is also true.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$P:$ Earth is rotating.
+        \\$Q:$ Humans live on earth.
+        \\statement: If Earth is rotating, then humans live on Earth.
+        \\converse: If humans live on Earth, then Earth is rotating.
+    \end{normalize}
+	\end{enumerate}
+
+\newpage
+\item Consider the following \href{https://en.wikipedia.org/wiki/Riemann_hypothesis}{Riemann hypothesis}. (This is one of the \href{https://en.wikipedia.org/wiki/Millennium_Prize_Problems}{Millennium Prize Problems}, i.e. if you submit a correct solution, then the \href{https://en.wikipedia.org/wiki/Clay_Mathematics_Institute}{Clay Mathematics Institute} will give you one million dollars!)
+
+	\vspace{0.1in}
+	\noindent
+	\textit{\footnotemark[2] If $\zeta(s)=0$, then $s$ is a negative even integer or $s$ is a complex number with $\displaystyle\operatorname{Re}(s)=\frac{1}{2}$.}
+
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item State the converse of the Riemann hypothesis.
+	\begin{normalize}
+	    \vspace{0.1in}
+	    \\If $s$ is a negative even integer or $s$ is a complex number with $\displaystyle\operatorname{Re}(s)=\frac{1}{2}$, then $\zeta(s)=0$.
+	    \\
+    \end{normalize}
+	\item State the inverse of the Riemann hypothesis.
+	\begin{normalize}
+	    \vspace{0.1in}
+	    \\If $\zeta(s)$ does not equal to $0$, then $s$ is not a negative even integer or $s$ is not a complex number with $\displaystyle\operatorname{Re}(s)=\frac{1}{2}$.
+	    \\
+    \end{normalize}
+	\item State the contrapositive of the Riemann hypothesis.
+	\begin{normalize}
+	    \vspace{0.1in}
+	    \\If $s$ is not a negative even integer or $s$ is not a complex number with $\displaystyle\operatorname{Re}(s)=\frac{1}{2}$, then $\zeta(s)$ does not equal to $0$.
+	    \\
+    \end{normalize}
+	\item State the negation of the Riemann hypothesis.
+	\begin{normalize}
+	    \vspace{0.1in}
+	    \\$\zeta(s)$ does not equal to $0$, or $s$ is a negative even integer or $s$ is a complex number with $\displaystyle\operatorname{Re}(s)=\frac{1}{2}$.
+	    \\
+    \end{normalize}
+	\end{enumerate}
+	\footnotetext[2]{\ The Riemann-zeta function $\zeta(s)$ is the ``analytic continuation'' of $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^{s}}$, which converges iff $\operatorname{Re}(s)>1$.  For example, $\displaystyle\zeta(2)=\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\cdots =\frac{\pi^{2}}{6}$ (which was proved by \href{https://en.wikipedia.org/wiki/Basel_problem}{Euler}).}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,324 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath, amsthm, graphicx, fullpage, bm, mathrsfs, mathabx, enumerate, marginnote, color, hyperref, wasysym}
+
+%%%%%for footnote%%%%%
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%%%%%%%%%%%%%%%%
+
+%%%%%set of commands defined by me%%%%%
+\newcommand{\abs}[1]{\ensuremath{\left\lvert #1\right\rvert}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\NOT}[1]{\ensuremath{\sim\hspace{-0.05in}#1}}
+\renewcommand*\divides{\hspace{0.05in}|\hspace{0.05in}}
+\renewcommand*\div{\hspace{0.05in}\text{div}\hspace{0.05in}}
+\renewcommand*\mod{\hspace{0.05in}\text{mod}\hspace{0.05in}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%\pagenumbering{gobble}
+
+\hfill\makebox[2.5in][l]{\textbf{Name:}}
+
+\vspace{0.3in}
+\begin{center}
+{\Large{\textbf{MATH 3034}}}
+
+\vspace{0.1in}
+{\large{Problem Set 2 (Due Wednesday, September 18, 2019)}}
+\end{center}
+
+\vspace{0.3in}
+\noindent
+\underline{Instructions}
+\begin{itemize}
+\vspace{0.1in}
+\item You must print the problem set, write solutions on the printout (not on a separate sheet of paper), and staple all pages together.  Alternatively,  You will lose 1 point for not following this rule.
+\vspace{0.1in}
+\item Check the list of definitions and mathematical results you are allowed to use (available on Canvas).  You may not quote theorems found in a random book, including AAR.
+\vspace{0.1in}
+\item No late submission will be accepted.
+\vspace{0.1in}
+\item Each problem set will be graded out of 20 points based on your work on a few selected problems and the completeness of the rest of homework.
+\vspace{0.1in}
+\item You will receive 1 point for typing up your solutions using \LaTeX, as long as your problem set score does not exceed 20 points.  If you decide to do so, then download the corresponding tex file from Canvas and modify it (do not erase or change problem statements).  All VT students receive free Pro accounts on \href{https://www.overleaf.com/edu/vtech}{Overleaf}.
+\vspace{0.1in}
+\item You are encouraged to work with your classmates, but \textbf{you must write up your own solutions}.  Any form of plagiarism (e.g. copying your friend's tex file) will not be tolerated and will be reported to the Office of Academic Integrity.
+\vspace{0.1in}
+\item My solution will be posted within 24 hours of the deadline.  If there is a major mistake, the first student to point it out will receive 1 point.  I highly recommend that you make a copy of your problem set before you submit so that you can correct your mistakes immediately.
+\end{itemize}
+
+\vfill
+\noindent
+\textbf{Honor Pledge}: I did not give or receive any unauthorized assistance on this problem set.
+
+\vspace{0.5in}
+\hfill\makebox[3.0in]{\hrulefill}
+
+\hfill\makebox[3.0in]{Signature}
+
+\newpage
+\begin{enumerate}[{\bfseries 1.}]
+\item Let $P(x)$ be the open statement ``$x^{2}-2x\leq 4$.''
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Determine the truth set when $U_{x}=\mathbb{Z}^{+}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$[1, 3]$\tab
+    \end{normalize}
+    \\
+	\item Determine the truth set when $U_{x}=\mathbb{Z}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$[-1, 3]$\tab
+    \end{normalize}
+    \\
+	\item Determine the truth set when $U_{x}=\mathbb{R}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$[1-\sqrt{5}, 1+\sqrt{5}]$\tab
+    \end{normalize}
+	\end{enumerate}
+\vspace{0.2in}
+\item Let $P(x)$ be the open statement ``$\sin{x}\in\mathbb{Z}$.''
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Determine the truth set when $U_{x}=\mathbb{Z}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$\{0\}$\tab
+    \end{normalize}
+    \\
+	\item Determine the truth set when $U_{x}=\mathbb{R}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$\{\dfrac{k\pi}{2} \mid k\in \mathbb{Z}\}$\tab
+    \end{normalize}
+    \\
+	\end{enumerate}
+\end{enumerate}
+\vfill
+
+\vspace{0.2in}
+\noindent
+\underline{Definition}
+
+\vspace{0.05in}
+\noindent
+Let $n>1$ be an integer.
+
+\vspace{0.05in}
+\noindent
+$n$ is said to be \textbf{prime} if the only positive divisors of $n$ are $1$ and $n$.
+
+\vspace{0.05in}
+\noindent
+$n$ is said to be \textbf{composite} if it is not prime, i.e. there exist integers $m$ and $k$ such that $n=mk$ and $1<m, k<n$. 
+
+\newpage
+\begin{enumerate}[{\bfseries 1.}]
+\addtocounter{enumi}{2}
+\item Let $P(x)$ be the open statement ``$x$ is prime,'' and let $Q(x)$ be the open statement ``$x$ is composite.''n 
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Determine the truth set of $P(x)$ when $U_{x}=\left\{2, 3, 4, 5, 6, 7, 8, 9, 10\right\}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$\{2, 3, 5, 7\}$\tab
+    \end{normalize}
+    \\
+	\item Determine the truth set of $Q(x)$ when $U_{x}=\left\{11, 12, 13, 14, 15, 16, 17, 18, 19, 20\right\}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$\{12, 14, 15, 16, 18, 20\}$\tab
+    \end{normalize}
+    \\
+	\item Determine the truth set of $\NOT{P(x)}\ \land\NOT{Q(x)}$ when $U_{x}=\mathbb{Z}^{+}$.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$\NOT{P(x)} \iff{Q(x)}$\tab
+        \\$\NOT{Q(x)} \iff{P(x)}$\tab
+        \\$\NOT{P(x)} \land \NOT{Q(x)} \iff{Q(x) \land P(x)} \iff{\mathbb{Z}^{+}}$\tab 
+    \end{normalize}
+	\end{enumerate}
+
+\vspace{0.2in}
+\item Consider the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{\footnotemark[2] Every real number whose cube is an integer must be an integer.}
+	\end{center}
+
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item State the statement in a compact form.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$(\forall x\in\mathbb{R})\ (x^3\in\mathbb{Z})\to (x\in\mathbb{Z})$
+        \\
+    \end{normalize}
+	\item State the negation in words.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\There exists a real number such that if it is not an integer, its cube is not an integer neither. 
+        \\
+    \end{normalize}
+	\item Prove the negation.
+	\begin{normalize}
+	\begin{proof}
+	    \vspace{0.1in}
+        \\$(\frac{1}{2}) ^3 = \frac{1}{8}$ 
+        \\$\frac{1}{2}$ and $\frac{1}{8}$ are not integers.
+        \\
+        \end{proof}
+    \end{normalize}
+	\end{enumerate}
+	\footnotetext[2]{What happens if we use $\mathbb{Q}$ instead of $\mathbb{R}$?  Is the statement false?}
+
+\newpage
+\item Consider the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{The average of any two rational numbers is a rational number.}
+	\end{center}
+
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Express the statement in a compact form.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\$(\forall x, y\in\mathbb{Q})\ (\frac{x + y}{2}\in\mathbb{Q})$
+        \\
+    \end{normalize}
+	\item State the negation in words.
+	\begin{normalize}
+	    \vspace{0.1in}
+        \\There exists two rational numbers such that the average of them is not a rational number.
+        \\
+    \end{normalize}
+	\item Identify mistakes in the following ``proofs.''
+
+		\vspace{0.1in}
+		\begin{enumerate}[(i)]
+		\item \begin{proof}
+			Randomly pick two rational numbers, say $\dfrac{2}{3}$ and 5.  Their average is $\dfrac{1}{2}\left(\dfrac{2}{3}+5\right)=\dfrac{17}{6}$, which is a rational number.  Therefore, the average of two rational numbers is again a rational number.
+			\end{proof}
+    		\begin{normalize}
+    	    \vspace{0.1in}
+            \\This is a universal statement so that it cannot be proven by giving examples.
+            \\
+            \end{normalize}
+		\item\begin{proof}
+			Let $x, y\in\mathbb{Q}$.  Then, because the average of any two rational numbers is a rational number, $\dfrac{x+y}{2}$ is a rational number.
+			\end{proof}
+			\begin{normalize}
+        	\vspace{0.1in}
+            \\This is a circular reasoning where it's using the conclusion to prove the conclusion. 
+            \\
+            \end{normalize}
+		\end{enumerate}
+	\item Prove the statement.
+	\begin{normalize}
+	    \begin{proof}
+        \vspace{0.1in}
+        Let $x, y\in\mathbb{Q}$. 
+        \\By definition, $x = \frac{a}{b}$ where $a, b\neq 0 \in\mathbb{Z}$, $y = \frac{c}{d}$ where $c, d\neq 0 \in\mathbb{Z}$.
+        \\Therefore, $\frac{x+y}{2} = (\frac{a}{b}+\frac{c}{d})*\frac{1}{2} = \frac{ad+bc}{bd}*\frac{1}{2} = \frac{ad+bc}{2bd}$, where $ad + bc$ and $2bd$ are both integers, and $b*d\neq0$, so $\frac{x+y}{2}$ is a rational number.
+        \end{proof}
+    \end{normalize}
+	\vfill
+	\vfill
+	\end{enumerate}
+\newpage
+\item Consider the following false statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{For every integer $n\geq 3$, $n^2-4$ is composite.}
+	\end{center}
+
+	\vspace{0.1in}
+	\noindent
+	Explain why the following ``proof'' fails.  (Do not explain why the statement is false.)
+	
+	\vspace{0.1in}
+	\begin{proof}
+	Let $n\geq 3$ be an integer.  Note that we have $n^{2}-4=(n-2)(n+2)$, then $n^{2}-4$ is a product of two integers, which is composite.
+	\end{proof}
+	\begin{normalize}
+    \vspace{0.1in}
+    $n\geq 3$ is not a number but a statement so it cannot be fixed as an integer.  
+    \\
+    \end{normalize}
+\vspace{0.2in}
+\item Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{The product of any two odd integers must be odd.}
+	\end{center}
+	\begin{normalize}
+    \vspace{0.1in}
+    \begin{proof}  
+    Let $m, n\in\mathbb{Z}$.
+    \\By definition, there exist $a, b\in\mathbb{Z}$ such that $m = 2a+1, n = 2b+1$. 
+    \\We have $m*n = (2a+1)(2b+1) = 4ab+2a+2b+1 = 2(2ab+a+b)+1$, where $2ab+a+b$ is an integer. So the product of $m$ and $n$ is odd.
+    \end{proof}
+    \end{normalize}
+	\vfill
+	\vfill
+\newpage
+\item Consider the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{$(\forall n\in\mathbb{Z})\ (48\divides n)\to (8\divides n)\land (12\divides n)$}
+	\end{center}
+
+	\begin{enumerate}[(a)]
+	\vspace{0.1in}
+	\item Express the statement in words.
+	\begin{normalize}
+    \vspace{0.1in}
+    \\For any integer that is divisible by 48 must be divisible by 8 and 12.
+    \\
+    \end{normalize}
+	\item Prove or disprove the statement.
+	\begin{normalize}
+    \vspace{0.1in}
+    \begin{proof}  
+    Let $n\in\mathbb{Z}$ such that $48\mid n$.
+    \\By definition, there exists a $k\in\mathbb{Z}$ such that $n = 48k$. Therefore, $n = 8(6k) = 12(4k)$ where $6k, 4k\in\mathbb{Z}$, so $n$ is also divisible by 8 and 12.
+    \end{proof}
+    \end{normalize}
+	\vfill
+	\vfill
+	\item State the converse in words.
+	\begin{normalize}
+    \vspace{0.1in}
+    \\For any integer that is divisible by 8 and 12 must be divisible by 48.
+    \\
+    \end{normalize}
+	\item Prove or disprove the converse.
+	\begin{normalize}
+    \vspace{0.1in}
+    \begin{proof}  
+    $24 = 3*8$, so $8\mid 24$.
+    \\Also, $24= 2*12$, so $12\mid 24$.
+    \\However, $24 = \frac{1}{2}*48$ where $\frac{1}{2}$ is not an integer, so $48\notdivides 24$ 
+    \\
+    \end{proof}
+    \end{normalize}
+	\vfill
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}

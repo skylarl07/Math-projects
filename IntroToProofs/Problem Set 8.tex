@@ -1,0 +1,145 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath, amsthm, graphicx, fullpage, bm, mathrsfs, mathabx, enumerate, marginnote, color, hyperref, wasysym}
+
+%%%%%for footnote%%%%%
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%%%%%%%%%%%%%%%%
+
+%%%%%rcases%%%%%
+%%%%%%%%%%%%%%
+
+%%%%%set of commands defined by me%%%%%
+\newcommand{\abs}[1]{\ensuremath{\left\lvert #1\right\rvert}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\NOT}[1]{\ensuremath{\sim\hspace{-0.05in}#1}}
+\renewcommand*\divides{\hspace{0.05in}|\hspace{0.05in}}
+\renewcommand*\div{\hspace{0.05in}\text{div}\hspace{0.05in}}
+\renewcommand*\mod{\hspace{0.05in}\text{mod}\hspace{0.05in}}
+\newcommand{\floor}[1]{\ensuremath{\left\lfloor #1\right\rfloor}}
+\newcommand{\ceil}[1]{\ensuremath{\left\lceil #1\right\rceil}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%set notation%%%%%%%%%%%%%%%%%%
+%https://tex.stackexchange.com/questions/253077/how-do-you-create-a-set-in-latex
+\usepackage{mathtools}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%\pagenumbering{gobble}
+
+\hfill\makebox[2.5in][l]{\textbf{Name: Skylar Liang}}
+
+\vspace{0.3in}
+\begin{center}
+{\Large{\textbf{MATH 3034}}}
+
+\vspace{0.1in}
+{\large{Problem Set 8 (Due Monday, December 09, 2019)}}
+\end{center}
+
+\vspace{0.3in}
+\noindent
+\underline{Instructions}
+\begin{itemize}
+\vspace{0.1in}
+\item You must print the problem set, write solutions on the printout (not on a separate sheet of paper), and staple all pages together.  Alternatively,  You will lose 1 point for not following this rule.
+\vspace{0.1in}
+\item Check the list of definitions and mathematical results you are allowed to use (available on Canvas).  You may not quote theorems found in a random book, including AAR.
+\vspace{0.1in}
+\item No late submission will be accepted.
+\vspace{0.1in}
+\item Each problem set will be graded out of 20 points based on your work on a few selected problems and the completeness of the rest of homework.
+\vspace{0.1in}
+\item You will receive 1 point for typing up your solutions using \LaTeX, as long as your problem set score does not exceed 20 points.  If you decide to do so, then download the corresponding tex file from Canvas and modify it (do not erase or change problem statements).  All VT students receive free Pro accounts on \href{https://www.overleaf.com/edu/vtech}{Overleaf}.
+\vspace{0.1in}
+\item You are encouraged to work with your classmates, but \textbf{you must write up your own solutions}.  Any form of plagiarism (e.g. copying your friend's tex file) will not be tolerated and will be reported to the Office of Academic Integrity.
+\vspace{0.1in}
+\item My solution will be posted within 24 hours of the deadline.  If there is a major mistake, the first student to point it out will receive 1 point.  I highly recommend that you make a copy of your problem set before you submit so that you can correct your mistakes immediately.
+\end{itemize}
+
+\vspace{0.3in}
+\noindent
+{\color{red}{This problem set is entirely optional, but its score will replace your lowest problem set score.}}
+
+\vfill
+\noindent
+\textbf{Honor Pledge}: I did not give or receive any unauthorized assistance on this problem set.
+
+\vspace{0.5in}
+\hfill\makebox[3.0in]{\hrulefill}
+
+\hfill\makebox[3.0in]{Signature}
+
+\newpage
+\begin{enumerate}[{\bfseries 1.}]
+\item Let $f: X\to Y$ and $g: Y\to Z$ be functions.  Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{If both $f$ and $g$ are 1-1, then $g\circ f$ is 1-1.}
+	\end{center}
+	
+	\vfill
+
+\vspace{0.1in}
+\item Let $f: X\to Y$ and $g: Y\to Z$ be functions.  Prove or disprove the following statement.
+
+	\vspace{0.1in}
+	\begin{center}
+	\noindent
+	\textit{If $f$ is not onto, then $g\circ f$ is not onto.}
+	\end{center}
+	
+	\vfill
+
+\newpage
+\item\begin{enumerate}[(a)]
+	\item Determine if $f: \mathbb{Z}_{8}\to\mathbb{Z}_{4}$ defined by $f([x]_{8})=[3x+1]_{4}$ is well-defined.\\  Prove your claim.
+		\vfill
+
+	\vspace{0.1in}
+	\item Determine if $f: \mathbb{Z}_{4}\to\mathbb{Z}_{8}$ defined by $f([x]_{4})=[3x+1]_{8}$ is well-defined.\\  Prove your claim.
+		\vfill
+
+	\end{enumerate}
+
+\newpage
+\item Use modular arithmetic to determine the last two digits of $321^{456789}$.
+
+\newpage
+\item Let $S$ be a set.  Consider the binary relation $\sim$ on $P(S)$ defined as follows:
+
+	$$A\sim B\Longleftrightarrow\text{there exists a bijection from }A\text{ to }B.$$
+
+	\begin{enumerate}[(a)]
+	\vspace{0.2in}
+	\item Prove that $\sim$ is reflexive.
+		\vfill
+	
+	\vspace{0.1in}
+	\item Prove that $\sim$ is symmetric.
+		\vfill
+
+	\vspace{0.1in}
+	\item Prove that $\sim$ is transitive.
+		\vfill
+
+	\end{enumerate}
+	\footnotetext{We have shown that having the same cardinality is an equivalence relation.}
+
+\newpage
+\item\begin{enumerate}[(a)]
+	\item Prove that $(0,1)$ has the same cardinality as $(-1,1)$.
+
+	\newpage
+	\item Prove that $(-1,1)$ has the same cardinality as $\mathbb{R}$.
+
+	\end{enumerate}
+	\footnotetext{By transitivity, $(0,1)$ and $\mathbb{R}$ have the same cardinality.}
+\end{enumerate}
+\end{document}
